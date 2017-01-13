@@ -18,7 +18,7 @@
     <li><a href="{{ authors }}"> Authors</a></li>
     <li><a href="{{ publisher }}"> Publishers</a></li>
     <li><a href="{{ search }}"> Search</a></li>
-    <li><a href="{{ admin }}"> Admin</a></li>
+    <li><a href="{% url 'admin:index' %}"> Admin</a></li>
 </ul>
 	{% block footer %}
     {% include 'footer.html' %}
