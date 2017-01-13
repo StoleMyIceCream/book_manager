@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	{% block title %}
+    {% include 'header.html' %}
+	{% endblock %}
+	{% url 'books' as books %}
+	{% url 'authors' as authors %}
+	{% url 'publisher' as publisher %}
+	{% url 'search' as search %}
+</head>
+<body>
+	{% block navbar %}
+    {% include 'navbar.html' %}
+	{% endblock %}
+<ul>
+	<li><a href="{{ books }}"> Books</a></li>
+    <li><a href="{{ authors }}"> Authors</a></li>
+    <li><a href="{{ publisher }}"> Publishers</a></li>
+    <li><a href="{{ search }}"> Search</a></li>
+</ul>
+	{% block footer %}
+    {% include 'footer.html' %}
+	{% endblock %}
+</body>
+</html>

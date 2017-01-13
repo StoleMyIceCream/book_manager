@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	{% block title %}
+    {% include 'header.html' %}
+	{% endblock %}
+</head>
+<body>
+
+	{% block navbar %}
+    {% include 'navbar.html' %}
+	{% endblock %}
+
+<ul>
+	<li>Name : {{details.name}}</li>
+    <li>Address : {{details.country}}, {{details.state_province}}, {{details.city}}, {{details.address}}</li>
+    <li>Site : <a href="{{details.website}}">{{details.website}}</a></li>
+</ul>
+</body>
+</html>

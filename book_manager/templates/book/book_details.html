@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	{% block title %}
+    {% include 'header.html' %}
+	{% endblock %}
+</head>
+<body>
+
+	{% block navbar %}
+    {% include 'navbar.html' %}
+	{% endblock %}
+
+<ul>
+	<li>Title : {{details.title}}</li>
+    <li>Author : {{details.authors.first_name}} {{details.authors.last_name}}</li>
+    <li>Publisher : {{details.publisher.name}}</li>
+    <li>Date : {{details.publication_date}}</li>
+    <li>Number of pages : {{details.num_pages}} pages</li>
+</ul>
+</body>
+</html>

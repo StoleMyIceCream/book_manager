@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	{% block title %}
+    {% include 'header.html' %}
+	{% endblock %}
+</head>
+<body>
+	{% block navbar %}
+    {% include 'navbar.html' %}
+	{% endblock %}
+	
+<ul>
+	{%for author in object_list%}
+	<li><a href="{{ author.id }}">{{author.first_name}} {{author.last_name}}</a></li>
+	{% empty %}
+    <li>No authors yet.</li>
+	{% endfor %}
+</ul>
+</body>
+</html>

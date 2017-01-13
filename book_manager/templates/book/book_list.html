@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	{% block title %}
+    {% include 'header.html' %}
+	{% endblock %}
+</head>
+<body>
+	{% block navbar %}
+    {% include 'navbar.html' %}
+	{% endblock %}
+	
+<ul>
+	{%for book in object_list %}
+	<li><a href="{{ book.id }}">{{book.title}}</a></li>
+	{% empty %}
+    <li>No books yet.</li>
+	{% endfor %}
+</ul>
+</body>
+</html>
